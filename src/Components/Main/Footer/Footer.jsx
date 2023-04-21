@@ -14,10 +14,12 @@ const Footer = ({ handleClick }) => {
           <img src={arrow} alt="" />
           <span onClick={handleClick}>{t("Support")}</span>
           <img src={arrow} alt="" />
-        </div>{" "}
-        <p onClick={handleClick}>
-          {t("iPhone Repair - Official Apple Support")}
-        </p>
+        </div>
+        <div>
+          <p onClick={handleClick}>
+            {t("iPhone Repair - Official Apple Support")}
+          </p>
+        </div>
       </div>
       <div className={styles.more}>
         <hr />

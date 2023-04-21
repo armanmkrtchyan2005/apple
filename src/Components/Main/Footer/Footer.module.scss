@@ -11,12 +11,20 @@
     display: flex;
     flex-wrap: wrap;
     color: #515153;
+    // justify-content: space-between;
     align-items: center;
     .arrows {
-      width: 120px;
+      width: 110px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    p {
+      margin-left: 10px;
+      @media (max-width: 342px) {
+        margin-top: 10px;
+        margin-left: 0;
+      }
     }
   }
   .more {
