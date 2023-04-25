@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import img from "./Images/path4.png";
-import arrow from "./Images/Icon.png";
+import img from "./Images/path4.svg";
+import arrow from "./Images/Icon.svg";
 import { useTranslation } from "react-i18next";
 
 const Footer = ({ handleClick }) => {
@@ -10,7 +10,7 @@ const Footer = ({ handleClick }) => {
     <div className={styles.footer}>
       <div className={styles.support}>
         <div className={styles.arrows}>
-          <img src={img} alt="" />
+          <img src={img} />
           <img src={arrow} alt="" />
           <span onClick={handleClick}>{t("Support")}</span>
           <img src={arrow} alt="" />

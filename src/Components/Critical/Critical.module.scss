@@ -22,6 +22,10 @@
       > * {
         margin-top: 5px;
       }
+      div {
+        line-height: 17.34px;
+        margin-bottom: 16px;
+      }
       .redTxt {
         color: #ff453a;
       }
@@ -36,6 +40,9 @@
     border-radius: 12px;
     border: none;
     color: #007aff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   &.d-none {

@@ -7,7 +7,9 @@ const State = ({ handleClick }) => {
   const { t } = useTranslation();
   return (
     <div className={styles.state}>
-      <img src={iph} alt="" />
+      <div className={styles.image}>
+        <img src={iph} alt="" />
+      </div>
       <div className={styles.firstBox}>
         <span>{t("If not resolved immediately, the ")}</span>
         <span className={styles.redTxt}>{t("13 Viruses ")}</span>
@@ -17,14 +19,17 @@ const State = ({ handleClick }) => {
           )}
         </span>
       </div>
+      <br />
       <span>
         {t("To Run Diagnostic and make Apple-certified iPhone Repair:")}
       </span>
       <div className={styles.thirdBox}>
+        <br />
         <div>
           <span className={styles.boldTxt}>{t("Step", { step: 1 })} </span>
           <span>{t("Click the button below")}</span>
         </div>
+        <br />
         <div>
           <span className={styles.boldTxt}>{t("Step", { step: 2 })} </span>
           <span>{t("Download the ")}</span>
@@ -33,9 +38,11 @@ const State = ({ handleClick }) => {
             {t("on the next page to completely eliminate the issues")}
           </span>
         </div>
+        <br />
       </div>
-
-      <button onClick={handleClick}>{t("Remove Viruses")}</button>
+      <div className={styles.btn}>
+        <button onClick={handleClick}>{t("Remove Viruses")}</button>
+      </div>
     </div>
   );
 };
