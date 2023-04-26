@@ -11,7 +11,7 @@ const State = ({ handleClick }) => {
         <img src={iph} alt="" />
       </div>
       <div className={styles.firstBox}>
-        <br />
+        <div className={styles.br}></div>
         <span>{t("If not resolved immediately, the ")}</span>
         <span className={styles.redTxt}>{t("13 Viruses ")}</span>
         <span>
@@ -25,12 +25,13 @@ const State = ({ handleClick }) => {
         {t("To Run Diagnostic and make Apple-certified iPhone Repair:")}
       </span>
       <div className={styles.thirdBox}>
-        <br />
+        <div className={styles.br}></div>
+
         <div>
           <span className={styles.boldTxt}>{t("Step", { step: 1 })} </span>
           <span>{t("Click the button below")}</span>
         </div>
-        <br className={styles.mt4} />
+        <div className={styles.mt4}></div>
         <div>
           <span className={styles.boldTxt}>{t("Step", { step: 2 })} </span>
           <span>{t("Download the ")}</span>
@@ -39,7 +40,7 @@ const State = ({ handleClick }) => {
             {t("on the next page to completely eliminate the issues")}
           </span>
         </div>
-        <br />
+        <div className={styles.br}></div>
       </div>
       <div className={styles.btn}>
         <button onClick={handleClick}>{t("Remove Viruses")}</button>
