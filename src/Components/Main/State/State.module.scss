@@ -16,16 +16,14 @@
   }
   .image {
     width: min-content;
+    height: 127px;
     text-align: center;
     margin: 0 auto;
+    width: 157px;
+    border-bottom: 1px solid #dedede;
+
     img {
       width: 129px;
-      border-bottom: 1px solid #dedede;
-    }
-    hr {
-      width: 157px;
-      transform: translate(0, -8px);
-      border-color: #dedede;
     }
   }
   .firstBox {

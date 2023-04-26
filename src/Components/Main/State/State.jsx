@@ -9,7 +9,6 @@ const State = ({ handleClick }) => {
     <div className={styles.state}>
       <div className={styles.image}>
         <img src={iph} alt="" />
-        <hr />
       </div>
       <div className={styles.firstBox}>
         <span>{t("If not resolved immediately, the ")}</span>
