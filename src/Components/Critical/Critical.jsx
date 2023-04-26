@@ -22,6 +22,7 @@ const Critical = ({ setIsOpen }) => {
           <img className={styles.img} src={settings} alt="settings" />
           <div className={styles.text}>
             <h2>{t("Critical Threats")}</h2>
+            <br />
             <div>
               <span className={styles.redTxt}>{t("13 Viruses detected")}</span>
               <span> {t("after visiting Adult website! Your iPhone is")}</span>

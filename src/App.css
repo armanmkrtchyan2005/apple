@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "San Francisco";
-  font-weight: 400;
 }
 
 .App {
@@ -20,7 +18,13 @@ a {
 }
 
 @font-face {
-  font-family: "San Francisco";
+  font-family: "SF PRO DISPLAY";
   font-weight: 400;
   src: url("./fonts/SFPRODISPLAYREGULAR.OTF");
+}
+
+@font-face {
+  font-family: "SF PRO TEXT";
+  font-weight: 400;
+  src: url("./fonts/SFProText-Regular.ttf");
 }
