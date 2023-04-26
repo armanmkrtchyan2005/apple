@@ -9,22 +9,34 @@
   font-size: 12px;
   font-family: "SF PRO TEXT";
   .support {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     color: #515153;
     // justify-content: space-between;
     align-items: center;
+    @media (max-width: 342px) {
+      display: block;
+      .text {
+        margin: 0;
+      }
+    }
     .arrows {
       width: 110px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      .apple {
+        margin-right: 10px;
+      }
+      span {
+        margin: 0 10px;
+      }
     }
-    p {
+    .text {
+      width: 100%;
       margin-left: 10px;
       @media (max-width: 342px) {
-        margin-top: 10px;
-        margin-left: 0;
+        margin: 0;
+        margin-top: 8px;
       }
     }
   }
@@ -43,6 +55,7 @@
         border: none;
         background-color: transparent;
         color: #1d1d1e;
+        font-size: 16px;
       }
     }
   }

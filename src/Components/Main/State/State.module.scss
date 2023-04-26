@@ -4,15 +4,21 @@
   line-height: 24.32px;
   justify-content: space-evenly;
   padding: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
   padding-top: 87px;
   padding-bottom: 24px;
   box-sizing: border-box;
   font-family: "SF PRO TEXT";
   font-weight: 400;
+  font-size: 16px;
   br {
     display: block;
     content: "";
     margin-top: 20px;
+  }
+  .mt4 {
+    margin-top: 4px;
   }
   .image {
     width: min-content;

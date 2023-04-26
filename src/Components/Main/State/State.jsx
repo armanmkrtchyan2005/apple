@@ -11,6 +11,7 @@ const State = ({ handleClick }) => {
         <img src={iph} alt="" />
       </div>
       <div className={styles.firstBox}>
+        <br />
         <span>{t("If not resolved immediately, the ")}</span>
         <span className={styles.redTxt}>{t("13 Viruses ")}</span>
         <span>
@@ -29,7 +30,7 @@ const State = ({ handleClick }) => {
           <span className={styles.boldTxt}>{t("Step", { step: 1 })} </span>
           <span>{t("Click the button below")}</span>
         </div>
-        <br />
+        <br className={styles.mt4} />
         <div>
           <span className={styles.boldTxt}>{t("Step", { step: 2 })} </span>
           <span>{t("Download the ")}</span>

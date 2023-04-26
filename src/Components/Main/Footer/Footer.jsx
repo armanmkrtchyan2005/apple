@@ -10,12 +10,12 @@ const Footer = ({ handleClick }) => {
     <div className={styles.footer}>
       <div className={styles.support}>
         <div className={styles.arrows}>
-          <img src={img} />
+          <img src={img} className={styles.apple} />
           <img src={arrow} alt="" />
           <span onClick={handleClick}>{t("Support")}</span>
           <img src={arrow} alt="" />
         </div>
-        <div>
+        <div className={styles.text}>
           <p onClick={handleClick}>
             {t("iPhone Repair - Official Apple Support")}
           </p>
@@ -46,6 +46,7 @@ const Footer = ({ handleClick }) => {
       </div>
       <div className={styles.foot}>
         <p>{t("United Kingdom")}</p>
+        <br />
         <div>
           <p>{t("Copyright © 2023 Apple Inc. All rights reserved.")}</p>
           <p className={styles.privacy}>
