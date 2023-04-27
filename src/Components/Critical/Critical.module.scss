@@ -15,7 +15,6 @@
     &::before {
       content: "";
       position: absolute;
-      // background: inherit;
       backdrop-filter: blur(11px);
       z-index: -1;
       width: 100%;

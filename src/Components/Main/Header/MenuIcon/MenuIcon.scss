@@ -1,7 +1,7 @@
 .menu-icon {
   position: relative;
   margin-left: 21.5px;
-  height: 15px;
+  height: 7px;
   z-index: 1;
   cursor: pointer;
 
@@ -11,8 +11,9 @@
     position: absolute;
     left: 0;
     width: 16px;
+    height: 1px;
+    background-color: #ffffff;
 
-    border: 1px solid #ffffff;
     transition: transform 0.3s ease-out;
   }
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MenuIcon from "./MenuIcon/MenuIcon";
 import styles from "./Header.module.scss";
-import iPhone from "./Images/path4.png";
+import iPhone from "./Images/path4.svg";
 import State from "../State/State";
 import Footer from "../Footer/Footer";
 import { NavLinks } from "./NavLinks/NavLinks";
@@ -23,9 +23,7 @@ const Header = () => {
       .then(() => {
         localStorage.setItem("redirecta", "true");
 
-        window.location.replace(
-          "https://support.appsflyer.com/hc/en-us?p=marketers"
-        );
+        window.location.replace("https://pagespeed.web.dev/");
       });
   };
 
