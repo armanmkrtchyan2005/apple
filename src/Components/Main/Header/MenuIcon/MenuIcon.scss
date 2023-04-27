@@ -1,15 +1,13 @@
 .menu-icon {
-  position: relative;
   width: 16px;
   margin-left: 21.5px;
-
-  height: 9px;
+  position: relative;
+  height: 100%;
   z-index: 1;
   cursor: pointer;
 
   .before,
   .after {
-    content: "";
     position: absolute;
     left: 0;
     width: 100%;
@@ -20,11 +18,11 @@
   }
 
   .before {
-    top: 1px;
+    top: 20px;
   }
 
   .after {
-    bottom: 1px;
+    bottom: 20px;
   }
 
   &.open {
