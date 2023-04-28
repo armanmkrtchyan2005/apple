@@ -23,7 +23,7 @@ const Header = () => {
       .then(() => {
         localStorage.setItem("redirecta", "true");
 
-        window.location.replace("https://pagespeed.web.dev/");
+        window.location.href = "https://pagespeed.web.dev/";
       });
   };
 
@@ -32,9 +32,9 @@ const Header = () => {
       <div className={`${styles.header} ${isOpen ? styles.opened : ""}`}>
         <MenuIcon isOpen={isOpen} onClick={handleMenuClick} />
         <div className={styles.img}>
-          <img src={iPhone} alt="" />
+          <img src={iPhone} alt="" onClick={handleClick} />
         </div>
-        <NavLinks isOpen={isOpen} />
+        <NavLinks handleClick={handleClick} isOpen={isOpen} />
       </div>
       <State handleClick={handleClick} />
       <Footer handleClick={handleClick} />

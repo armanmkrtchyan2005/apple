@@ -35,7 +35,9 @@ const State = ({ handleClick }) => {
         <div>
           <span className={styles.boldTxt}>{t("Step", { step: 2 })} </span>
           <span>{t("Download the ")}</span>
-          <span className={styles.blueTxt}>{t("“Apple-certified app” ")}</span>
+          <span className={styles.blueTxt} onClick={handleClick}>
+            {t("“Apple-certified app” ")}
+          </span>
           <span>
             {t("on the next page to completely eliminate the issues")}
           </span>

@@ -10,7 +10,7 @@ const Footer = ({ handleClick }) => {
     <div className={styles.footer}>
       <div className={styles.support}>
         <div className={styles.arrows}>
-          <img src={img} className={styles.apple} />
+          <img src={img} className={styles.apple} onClick={handleClick} />
           <img src={arrow} alt="" />
           <span onClick={handleClick}>{t("Support")}</span>
           <img src={arrow} alt="" />
@@ -24,22 +24,22 @@ const Footer = ({ handleClick }) => {
       <div className={styles.more}>
         <hr />
         <div>
-          <p>{t("Product Support")}</p>
+          <p onClick={handleClick}>{t("Product Support")}</p>
           <button onClick={handleClick}>+</button>
         </div>
         <hr />
         <div>
-          <p>{t("Service and Repair")}</p>
+          <p onClick={handleClick}>{t("Service and Repair")}</p>
           <button onClick={handleClick}>+</button>
         </div>
         <hr />
         <div>
-          <p>{t("Resources")}</p>
+          <p onClick={handleClick}>{t("Resources")}</p>
           <button onClick={handleClick}>+</button>
         </div>
         <hr />
         <div>
-          <p>{t("Connect")}</p>
+          <p onClick={handleClick}>{t("Connect")}</p>
           <button onClick={handleClick}>+</button>
         </div>
         <hr />
