@@ -17,7 +17,7 @@ const Main = () => {
     get: (searchParams, prop) => searchParams.get(prop),
   });
   if (!params.verified) {
-    window.location.replace("/reCaptcha");
+    window.location.replace("/recaptcha");
   }
   const { i18n } = useTranslation();
   const handlePopstate = () => {
