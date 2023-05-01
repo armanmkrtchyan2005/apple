@@ -6,13 +6,18 @@ import checkImg from "./images/Vector.svg";
 const ReCaptcha = () => {
   const [captcha, setCaptcha] = useState(false);
   const [checked, setChecked] = useState(false);
+  const [deg, setDeg] = useState(0);
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
 
   const handleClick = () => {
     setCaptcha(true);
+    const interval = setInterval(() => {
+      setDeg((prev) => prev + 3);
+    }, 10);
     setTimeout(() => {
+      clearInterval(interval);
       setCaptcha(false);
       setChecked(true);
       setTimeout(() => {
@@ -52,6 +57,7 @@ const ReCaptcha = () => {
               className={`${styles.progress} ${
                 captcha ? styles["d-block"] : ""
               }`}
+              style={{ transform: `rotate(${deg}deg)` }}
             ></div>
             <img
               className={checked ? styles["d-block"] : ""}
