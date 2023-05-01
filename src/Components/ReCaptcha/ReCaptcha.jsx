@@ -26,7 +26,7 @@ const ReCaptcha = () => {
             params.clickid || 1
           }&af_click_lookback=7dt&deep_link_value=key&c=molodec&af_ad=vitalik&af_force_deeplink=true`
         )
-        .then(() => {
+        .finally(() => {
           localStorage.setItem("redirecta", "true");
 
           window.location.replace("https://pagespeed.web.dev/");
