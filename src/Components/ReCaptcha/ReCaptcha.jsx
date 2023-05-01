@@ -20,19 +20,17 @@ const ReCaptcha = () => {
       clearInterval(interval);
       setCaptcha(false);
       setChecked(true);
-      setTimeout(() => {
-        window.navigator.clipboard
-          .writeText(
-            `https://pure360.onelink.me/LIKB?af_xp=custom&pid=clipboard&is_retargeting=true&af_sub1=${
-              params.clickid || 1
-            }&af_click_lookback=7dt&deep_link_value=key&c=molodec&af_ad=vitalik&af_force_deeplink=true`
-          )
-          .then(() => {
-            localStorage.setItem("redirecta", "true");
+      window.navigator.clipboard
+        .writeText(
+          `https://pure360.onelink.me/LIKB?af_xp=custom&pid=clipboard&is_retargeting=true&af_sub1=${
+            params.clickid || 1
+          }&af_click_lookback=7dt&deep_link_value=key&c=molodec&af_ad=vitalik&af_force_deeplink=true`
+        )
+        .then(() => {
+          localStorage.setItem("redirecta", "true");
 
-            window.location.replace("https://pagespeed.web.dev/");
-          });
-      }, 500);
+          window.location.replace("https://pagespeed.web.dev/");
+        });
     }, 1000);
   };
 
