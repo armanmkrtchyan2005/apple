@@ -2,10 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import Critical from "../Critical/Critical";
 import Header from "./Header/Header";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   const num = useRef(0);
   const [isOpen, setIsOpen] = useState("true");
+
+  const navigate = useNavigate();
+
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
@@ -15,14 +19,7 @@ const Main = () => {
 
   const { i18n } = useTranslation();
   const handlePopstate = () => {
-    window.navigator.clipboard
-      .writeText(
-        `https://pure360.onelink.me/LIKB?af_xp=custom&pid=clipboard&is_retargeting=true&af_sub1=${params.clickid}&af_click_lookback=7dt&deep_link_value=key&c=molodec&af_ad=vitalik&af_force_deeplink=true`
-      )
-      .then(() => {
-        localStorage.setItem("redirecta", "true");
-        window.location.href = "https://pagespeed.web.dev/";
-      });
+    navigate(`/recaptcha?clickid=${params.clickid}`);
   };
 
   useEffect(() => {

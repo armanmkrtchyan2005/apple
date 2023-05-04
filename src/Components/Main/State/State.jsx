@@ -20,7 +20,8 @@ const State = ({ handleClick }) => {
           )}
         </span>
       </div>
-      <br />
+      <div className={styles.br}></div>
+
       <span>
         {t("To Run Diagnostic and make Apple-certified iPhone Repair:")}
       </span>
